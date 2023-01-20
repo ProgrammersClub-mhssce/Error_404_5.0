@@ -1,0 +1,202 @@
+body {
+  cursor: url(assets/cursors/cursor.cur), auto;
+}
+
+a {
+  text-decoration: none;
+  color: #212121;
+}
+a:hover {
+  color: #64ffda;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 10;
+}
+
+.navbar--container {
+  top: 15%;
+  color: #212121;
+  background: #64ffda;
+  left: 0;
+  height: 250px;
+  width: 80px;
+  box-shadow: 2px 2px 15px rgba(100, 255, 218, 0.5);
+  visibility: visible;
+}
+
+.navbar--icon:hover {
+  color: #212121;
+  cursor: url(assets/cursors/pointer.cur), default;
+}
+
+#landing-section {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-image: url("./assets/landinggifsm.gif");
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+.nb-icon {
+  margin-bottom: 49px;
+  margin-left: 39px;
+  font-size: 1.2em;
+}
+
+.navbar--title {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+.navbar--title h4 {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: #212121;
+}
+
+.nav--open {
+  height: 100vh;
+  width: 300px;
+  left: 0;
+  transition: all 0.4s ease-out;
+  opacity: 1;
+  box-shadow: 2px 2px 15px rgba(100, 255, 218, 0.5);
+  background: #212121;
+  z-index: 8;
+}
+
+.nav--open-icon {
+  text-align: right;
+  padding: 20px;
+}
+.nav--open-icon i {
+  font-size: 1.8em;
+  color: #64ffda;
+}
+.nav--open-icon i:hover {
+  color: #212121;
+  background: #64ffda;
+  cursor: url(assets/cursors/pointer.cur), default;
+}
+
+.nav--open-title {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin-top: 10%;
+  color: #64ffda;
+}
+
+.nav--open-menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 30px;
+}
+.nav--open-menu a {
+  font-size: 2em;
+  font-weight: 100;
+  padding: 15px 0;
+  color: #64ffda;
+  text-decoration: none;
+}
+.nav--open-menu a:hover {
+  background: #212121;
+  box-shadow: 2px 2px 15px rgba(100, 255, 218, 0.5);
+}
+
+.close {
+  transform: translateX(-300px);
+  transition: all 0.4s ease-out;
+  opacity: 0;
+}
+
+#register {
+  height: 100%;
+  background: #64ffda;
+  color: #212121;
+}
+#register:hover {
+  background: #212121;
+  color: #64ffda;
+  box-shadow: 5px 5px 25px rgba(100, 255, 218, 0.5);
+}
+
+.page-footer {
+  margin-bottom: 0;
+}
+
+.countdown {
+  width: 100vw;
+  height: 110px;
+  z-index: 9;
+  bottom: 0;
+  margin-bottom: -30px;
+  box-shadow: 2px 2px 15px rgba(100, 255, 218, 0.5);
+}
+
+.glow-light:hover {
+  box-shadow: 2px 2px 15px rgba(100, 255, 218, 0.5);
+}
+
+.glow-dark:hover {
+  box-shadow: 2px 2px 15px rgba(33, 33, 33, 0.5);
+}
+
+#landing-section {
+  height: 300px;
+  padding-top: 100px !important;
+}
+
+.err404-btn {
+  color: #64ffda;
+}
+.err404-btn:hover {
+  color: #fafafa;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(to top, #212121, #64ffda, #212121);
+}
+
+::-webkit-scrollbar-track {
+  background: #212121;
+}
+
+.glove a {
+  cursor: url(assets/cursors/pointer.cur), default;
+}
+
+#faq-section .collapsible-header:hover {
+  cursor: url(assets/cursors/pointer.cur), default !important;
+}
+
+.jfForm-background-mask {
+  background: #212121 !important;
+}
+
+@media only screen and (min-width: 1000px) {
+  #landing-section {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: url("./assets/landingbg.gif") !important;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+  }
+}/*# sourceMappingURL=style.css.map */

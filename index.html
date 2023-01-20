@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- useful meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=.5,minimum-scale=.5,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="An event hosted by MHSSCE to promote the programming culture">
+    <meta name="keywords" content="hackathon">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#212121">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#212121">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#212121">
+    <!-- title -->
+    <title>ERR_404 5.0 | Hackathon</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Oswald" rel="stylesheet">
+    <!--Slick for slider-->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <!-- Add the new slick-theme.css if you want the default styling-->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <!-- Font Awesome -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+        integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        a[href^=tel] {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body onload="loadProgress()">
+
+
+    <!-- Loader | starts-->
+    <div id="loader" class="valign-wrapper grey darken-4">
+        <div class="row">
+            <div class="col s12">
+                <center>
+                    <div class="anim"></div>
+                    <div class="progress" style="background: #5a5a5a">
+                        <div class="indeterminate" style="color: #64ffda"></div>
+                    </div>
+                    <p class="light-heading flow-text">Loading...</p>
+                </center>
+            </div>
+        </div>
+    </div>
+    <!-- Loader | ends -->
+
+    <!-- main body | starts -->
+    <div id="main" class="grey lighten-5 glove">
+
+        <!-- Nav bar section -->
+        <div class="navbar--container navbar--icon sticky" id="nav--sticky">
+            <div class="navbar--title">
+                <h4>err_404 5.0</h4>
+                <img src="assets/favicon.png" alt="" style="width: 20px; height: 20px;">
+            </div>
+            <div class="nb-icon">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+        <div class="nav--open close sticky">
+            <div class="nav--open-icon">
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="nav--open-title">explore</div>
+            <div class="nav--open-menu">
+                <a href="index.html">home</a>
+                <a href="hackathons.html">hackathons</a>
+                <a href="sponsors.html">past sponsors</a>
+                <a href="index.html#rules-section">rules</a>
+                <a href="index.html#guidelines-section">guidelines</a>
+                <a href="index.html#faq-section">FAQs</a>
+            </div>
+        </div>
+
+        <!-- landing page section -->
+        <div id="landing-section" class="container-fluid section landingsection valign-wrapper grey lighten-5 scrollspy"
+           >
+
+            <div class="row center">
+                <div class="col s16 m16 l16">
+                    <!-- <div class="landing-title"><img src="./assets/err 404 5.0.gif"> -->
+                    <!-- <div class="landing-title"><img src="./assets/dino3_0_noloop.gif"> -->
+                    </div>
+                    <br>
+                </div>
+
+            </div>
+
+
+            <!-- <div class="row">
+                <div class="col m3 l2">
+                    <img class="landing-dino" src="./assets/favicon.png">
+                    <br>
+                </div>
+                <div class="col m3 l2"></div>
+                <div class="col m3 l2"></div>
+            </div> -->
+
+
+        </div>
+        <!-- <div class="row container center">
+            <div class="col s12 m12 l4 "></div>
+            <div class="col s12 m12 l4 glove">
+                <a id="register" class="btn waves-effect waves-teal" href="./shortlisted_teams.html">
+                    <h5>Shortlisted Teams</h4>
+                </a>
+            </div>
+            <div class="col s12 m12 l4 "></div>
+        </div> -->
+
+        <!-- Timer -->
+        <div class="grey darken-4 countdown">
+            <div class="row center">
+                <div class="col s12 m12 l2 light-heading">
+                    <!-- <h3>ERR_404 3.0</h3> -->
+                </div>
+                <div class="col m3 l2 ">
+                    <span class="countdown-amount light-heading" id="day"></span>
+                    <h3 class="countdown-title light-para">Days</h3>
+                </div>
+                <div class="col m3 l2 ">
+                    <span class="countdown-amount light-heading" id="hour"></span>
+                    <h3 class="countdown-title light-para">Hours</h3>
+                </div>
+                <div class="col m3 l2 ">
+                    <span class="countdown-amount light-heading" id="min"></span>
+                    <h3 class="countdown-title light-para">Mins</h3>
+                </div>
+                <div class="col m3 l2 ">
+                    <span class="countdown-amount light-heading" id="sec"></span>
+                    <h3 class="countdown-title light-para">Secs</h3>
+                </div>
+
+            </div>
+
+            <!-- <div class="row center">
+                <a id="register" class="btn waves-effect waves-teal grey darken-4 light-heading" href="#">Registrations
+                    Open
+                </a>
+            </div> -->
+        </div>
+
+
+        <!-- About -->
+        <div id="about-us-section" class="container-fluid section grey darken-4 scrollspy valign-wrapper">
+            <div class="side-gfx"></div>
+            <div class="container row ">
+                <div class="col s12">
+                    <h2 class="center light-heading">What is ERR_404 5.0?</h2>
+                    <p class="light-para flow-text">
+
+                        ERR_404 is a 2-days National level Hackathon
+                        organized by the Computer Department of
+                        Anjuman-I-Islam M.H. Saboo Siddik College of
+                        Engineering. <br><br> Here is a call for all the cyber
+                        nerds, tech-savvy learners to come forth, grab
+                        the opportunity, show their mind-boggling skills,
+                        compile and execute ideas in a competitive
+                        environment. <br><br> The hackathon highlights one’s
+                        interpersonal skills such as teamwork,
+                        leadership, attention to detail, compatibility,
+                        adaptability, brainstorm ideas, and build a
+                        working prototype
+                        <br> Whether it's your first hackathon, or your 50th, we would love to see students of all skill
+                        levels
+                        and from all colleges
+                        come along for a weekend of creativity, collaboration and coding.
+                        <br> 
+
+<!-- 
+                        ERR_404 5.0 is the fifth iteration of 48hrs State Level Hackathon organised by Computer
+                        Department of M. H. Saboo Siddik College of Engineering <br> <br>
+                        We call out all the cybernerds to come forth, compile your minds and execute your ideas in a
+                        competitive environment.
+                        <br> The hackathon will run across the weekend which offers students the chance to work in
+                        groups,
+                        brainstorm ideas, and
+                        build a working prototype before the time limit!
+                        <br> Whether it's your first hackathon, or your 50th, we would love to see students of all skill
+                        levels
+                        and from all colleges
+                        come along for a weekend of creativity, collaboration and coding.
+                        <br> Godspeed! </p> -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Domains -->
+        <!-- //TODO: add aniamtions to the domain icons  -->
+        <div id="domains-section" class="container-fluid section grey lighten-5 scrollspy valign-wrapper">
+            <div class="container">
+                <h2 class="center dark-heading">Domains</h2>
+                <br>
+                <br>
+                <div class="row">
+                    <!--Machine Learning-->
+
+                    <div class="col s12 m6 l4 xl4 center">
+
+                        <img class="responsive-img domain_icon" src="assets/ml_icon.png">
+                        <h5 class="dark-heading">Machine Learning</h5>
+                        <p class="content-font-size flow-text">Machine learning is a type of artificial intelligence
+                            (AI) that provides computers with the ability to learn without being explicitly programmed.
+                            Machine learning focuses on the development of computer programs that can change when
+                            exposed to new data. </p>
+
+                    </div>
+
+                    <!--Web Development-->
+
+                    <div class="col s12 m6 l4 xl4 center">
+
+                        <img class="responsive-img domain_icon" src="assets/web_icon.png">
+                        <h5 class="dark-heading">Web Development</h5>
+                        <p class="content-font-size flow-text">Web development is the work involved in developing a web
+                            site for the Internet or an intranet. It can range from developing a simple single static
+                            page of plain text to complex web-based internet applications, electronic businesses, and
+                            social network services.</p>
+
+                    </div>
+
+
+
+                    <!--Cloud Computing-->
+
+                    <div class="col s12 m6 l4 xl4 center">
+
+                        <img class="responsive-img domain_icon" src="assets/cloud_icon.png">
+                        <h5 class="dark-heading">Cloud Computing</h5>
+                        <p class="content-font-size flow-text">Cloud computing is the on-demand availability of computer
+                            system resources, especially data storage and computing power, without direct active
+                            management by the user. The term is generally used to describe data centers available to
+                            many users over the Internet.</p>
+
+                    </div>
+
+                    <!--Big Data-->
+
+                    <div class="col s12 m6 l4 xl4 center">
+
+                        <img class="responsive-img domain_icon" src="assets/big_data_icon.png">
+                        <h5 class="dark-heading">Big Data</h5>
+                        <p class="content-font-size flow-text">Big data analytics is the process of examining large and
+                            varied
+                            data sets -- i.e., big data -- to uncover hidden patterns,
+                            unknown correlations, market trends, customer preferences and other useful information that
+                            can
+                            help
+                            organizations
+                            make more-informed business decisions.</p>
+                    </div>
+
+                    <!--Networking And Security-->
+
+                    <div class="col s12 m6 l4 xl4 center">
+
+                        <img class="responsive-img domain_icon" src="assets/networking_and_security_icon.png">
+                        <h5 class="dark-heading">Networking And Security</h5>
+
+                        <p class="content-font-size flow-text">Network security is a specialized field in computer
+                            networking
+                            that involves securing a computer network infrastructure.
+                            Explore the world of Networking Security and build an innovative product around it, or find
+                            any
+                            unsolved/unknown bug.
+                            Remember ETERNALBLUE?</p>
+
+                    </div>
+
+                    <!--App Development-->
+
+                    <div class="col s12 m6 l4 xl4 center">
+
+                        <img class="responsive-img domain_icon" src="assets/app_icon.png">
+                        <h5 class="dark-heading">App Development</h5>
+                        <p class="content-font-size flow-text">Mobile app development is the act or process by which a
+                            mobile app is developed for mobile devices, such as personal digital assistants, enterprise
+                            digital assistants or mobile
+                            phones.
+                        </p>
+                    </div>
+
+                </div>
+                <br>
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Prizes -->
+        <div id="prizes-section" class="container-fluid section grey darken-4 scrollspy ">
+
+            <div class="container row center">
+
+                <h2 class="center light-heading">Prizes</h2>
+                <br>
+
+                <div class="col s12 m6 l6">
+                    <div class="trophy-container">
+                        <div class="trophy"></div>
+                        <div class="trophy-badge"></div>
+                    </div>
+
+                    <h4 class="center light-para">Prizes upto ₹1,00,000 for Top 3 teams</h4>
+
+                </div>
+
+                <div class="col s12 m6 l6">
+                    <div class="trophy-container">
+                        <div class="trophy"></div>
+                    </div>
+
+                    <h4 class='center light-para'>Special Prize for Female Hackers</h4>
+
+                </div>
+
+                <h4 class='center light-heading prizes-sub-heading col s12 m12 l12'>Goodies and Honourable Mentions for
+                    the
+                    rest
+                    of the hackers :)</h4>
+            </div>
+
+        </div>
+
+
+        <!-- Rules -->
+        <div id="rules-section" class="container-fluid section grey lighten-5 scrollspy valign-wrapper">
+            <div class="side-gfx"></div>
+            <div class="container">
+                <h2 class="center dark-heading">Rules and regulations!</h2>
+                <p class="dark-heading center flow-text">
+                    Teams can be anywhere from two to four members. To ensure a level field for all contestants, all
+                    code,
+                    design and assets must be created during the duration of the Hackathon. You are, however, free to
+                    make
+                    plans, create
+                    wireframes, and brainstorm prior to the event. You are allowed to use 3rd party services, APIs, open
+                    source projects, libraries,
+                    and
+                    frameworks. <br>
+                    There will be no
+                    alcohol, smoking allowed
+                    at the event. Behave professionally. <br> Remember that harassment and racist, sexist, or
+                    exclusionary
+                    jokes are
+                    not appropriate
+                    for this event*. Attendees violating these rules may be asked to leave the Hackathon at the sole
+                    discretion
+                    of the Hackathon
+                    organizers. Thank you for helping make this a welcoming, friendly event for all.
+                </p>
+                <p class="light-heading flow-text center">View the complete Rules here</p>
+                <br>
+                <!--Modal Trigger-->
+                <div class="row center">
+                    <a href="#modal"
+                        class="btn waves-effect waves-teal  grey darken-4 light-heading glow-dark">Rules</a>
+                </div>
+
+                <div class="">
+
+
+                    <!-- Modal Structure -->
+                    <div id="modal" class="modal grey darken-4">
+                        <div class="modal-content">
+                            <h4 class="light-para center">Rules</h4>
+                            <p class="time-font content-font-size">*Harassment includes but is not limited to offensive
+                                verbal
+                                or written comments related to gender, age, sexual orientation,
+                                disability, physical appearance, body size, race, religion, deliberate intimidation,
+                                stalking,
+                                following, harassing
+                                photography or recording, sustained disruption of talks or other events, inappropriate
+                                physical
+                                contact.
+                                <br><br> If what you’re doing is making someone feel uncomfortable, that counts as
+                                harassment and is
+                                enough reason to stop
+                                doing it. Be careful and mindful of the words that you choose.
+                                <br><br> Remember that exclusionary comments and hacks can be offensive to those around
+                                you.
+                                Participants asked to stop any
+                                harassing behavior are expected to comply immediately.
+                                <br><br> Sponsors, judges, mentors, volunteers, organizers, and anyone else at the event
+                                are
+                                also
+                                expected to follow the same.
+                                <br><br> In particular, attendees should not use sexualised images, activities, or other
+                                material
+                                both in their hacks and
+                                during the event. If a participant engages in harassing behavior, organizers may take
+                                any
+                                action
+                                they deem appropriate,
+                                including warning the offender or expulsion from the event. If you are being harassed,
+                                notice
+                                that someone else is
+                                being harassed, or have any other concerns, please report about it to the volunteers or
+                                the
+                                staffs.
+                            </p>
+                        </div>
+                        <div class="modal-footer grey darken-4">
+                            <a href="#!"
+                                class="time-font modal-action modal-close waves-effect waves-teal btn-flat grey darken-4 light-heading glow-dark">Agree</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Venue -->
+        <div id="venue-section" class="container-fluid section grey darken-4 scrollspy ">
+            <div class="container">
+                <h2 class="center light-heading">Venue</h2>
+                <br>
+                <br>
+
+                <div class="row center hide-on-med-and-up">
+
+                    <div class="col s12">
+
+                        <iframe width="100%" height="450" frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCgopPKhSyKKAhIq4hoBkMU0uHQ5UehyMQ&q=M.H.+Saboo+Siddik+College+of+Engineering,+8,+M.h.+Saboo+Siddiq+Polytechnic+Road,+Nagpada,+Mazgaon,+Mumbai,+Maharashtra+400008"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="col s12 m6 l6">
+                        <h3 class="light-heading">M.H. Saboo Siddik College of Engineering</h3>
+                        <p class="light-para flow-text">8, Saboo Siddik Polytechnic Road, New Nagpada, Byculla,
+                            Mumbai,
+                            Maharashtra 400008, India</p>
+                    </div>
+
+                </div>
+
+                <div class="row center valign-wrapper hide-on-small-only">
+
+                    <div class="col s12 m6 l6">
+
+                        <iframe width="100%" height="450" frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCgopPKhSyKKAhIq4hoBkMU0uHQ5UehyMQ&q=M.H.+Saboo+Siddik+College+of+Engineering,+8,+M.h.+Saboo+Siddiq+Polytechnic+Road,+Nagpada,+Mazgaon,+Mumbai,+Maharashtra+400008"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="col s12 m6 l6">
+                        <h3 class="light-heading">M.H. Saboo Siddik College of Engineering</h3>
+                        <p class="light-para flow-text">8, Saboo Siddik Polytechnic Road, New Nagpada, Byculla,
+                            Mumbai,
+                            Maharashtra 400008, India</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Guidelines -->
+        <div id="guidelines-section" class="container-fluid section grey lighten-5 scrollspy valign-wrapper">
+            <div class="container flow-text dark-heading">
+                <h2 class="center dark-heading">General Guidelines</h2>
+                We are hopeful that you all will be very excited about the ERR_404 3.0 Hackathon. To conduct this event
+                smoothly
+                &
+                in a successful
+                manner. We would like you to follow the below guidelines:
+                <li>Please be present on time for the onsite registration.</li>
+                <li>Bring along valid college ID cards. Without it, admission won't be allowed.</li>
+                <li>Participants are expected to follow the dress code mentioned in the undertaking</li>
+                <li>The schedule is tentative. It may change a bit,so participants are expected to abide as per the
+                    changed
+                    schedule.
+                </li>
+                <li>Nobody will be allowed to leave the campus between 9:00PM and 6:00AM.</li>
+                <li>Vehicles will not be allowed to park in the campus.</li>
+                <li>It is necessary to get a signed copy of the undertaking. You can find it below.</li>
+                </p>
+                <h4>The problem statements will be released two days before the event.</h4>
+                <br>
+                <!-- <div class="row center time-font">
+                    <a class="btn waves-effect waves-teal grey darken-4 light-heading glow-dark"
+                        href="err_404_undertaking.pdf" download>ERR_404 3.0 Hackathon Undertaking</a>
+                </div> -->
+
+            </div>
+
+            <div class="side-gfx side-gfx-right"></div>
+        </div>
+
+
+        <!-- Schedule -->
+        <div id="schedule-section" class="container-fluid section grey darken-4 scrollspy valign-wrapper">
+            <div class="side-gfx"></div>
+            <div class="container">
+                <h2 class="center light-heading">Schedule</h2>
+                <h5 class="light-para">
+                    Please bear in mind that it’s a hackathon schedule and things never go to plan, so please take the
+                    end
+                    time
+
+                    with a pinch
+                    of salt and allow for a bit of extra time for arrangements during the hackathon ¯\_(ツ)_/⁻</h5>
+                <br>
+                <div class="row center">
+                    <a href="timeline.html"
+                        class="btn waves-effect waves-teal grey darken-4 light-heading glow-light" style="background-color: #64ffda !important; color: black;">Check
+                        out
+                        the Schedule here</a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <!--FAQ-->
+        <div class="row grey lighten-5">
+            <div class="col m1"></div>
+            <div id="faq-section" class="container-fluid section col m10 s12 scrollspy">
+                <div class="container row">
+                    <h2 class="center dark-heading">FAQ's</h2>
+                    <br>
+                    <div class="col l1 hide-on-med-and-down"></div>
+
+                    <ul class="collapsible col l10 s12" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header flow-text">
+                                <span class="cross-box">
+                                    <span class="rotating-span"></span>
+                                    <span class="horizontal-span"></span>
+                                </span> Who can participate?
+                            </div>
+                            <div class="collapsible-body">
+                                <span class="flow-text">Anyone with a knack of programming and solving problems can
+                                    participate.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header flow-text">
+                                <span class="cross-box">
+                                    <span class="rotating-span"></span>
+                                    <span class="horizontal-span"></span>
+                                </span> How much does it cost?
+                            </div>
+                            <div class="collapsible-body">
+                                <span class="flow-text">Thanks to our college, attendance is completely free. We will
+                                    also
+                                    provide you with WiFi, breakfast, lunch, snacks, dinner and a workspace.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header flow-text">
+                                <span class="cross-box">
+                                    <span class="rotating-span"></span>
+                                    <span class="horizontal-span"></span>
+                                </span> What should I bring?
+                            </div>
+                            <div class="collapsible-body">
+                                <span class="flow-text">Bring your laptop, charger and other gadgets suitable to your
+                                    project and a will to code. Please bring a valid ID
+                                    for admission.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header flow-text">
+                                <span class="cross-box">
+                                    <span class="rotating-span"></span>
+                                    <span class="horizontal-span"></span>
+                                </span> Where is it?
+                            </div>
+                            <div class="collapsible-body">
+                                <span class="flow-text">M.H. Saboo Siddik College of Engineering, Byculla is happy to
+                                    provide
+                                    space in their campus to organize the Hackathon.
+                                    You can find the directions in the Venue section.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header flow-text">
+                                <span class="cross-box">
+                                    <span class="rotating-span"></span>
+                                    <span class="horizontal-span"></span>
+                                </span>Will Jain Food be provided?
+                            </div>
+                            <div class="collapsible-body">
+                                <span class="flow-text">Yes, food arrangements will be made for Jain
+                                    Participants.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header flow-text">
+                                <span class="cross-box">
+                                    <span class="rotating-span"></span>
+                                    <span class="horizontal-span"></span>
+                                </span>Is it compulsory that all members belong to same college?
+                            </div>
+                            <div class="collapsible-body">
+                                <span class="flow-text">No it is not, you can form a team of students from different
+                                    colleges. While registering you can either put the Team Leader's
+                                    College or mutually decide.</span>
+                            </div>
+                        </li>
+                        <!-- <li>
+                            <div class="collapsible-header flow-text">
+                                <span class="cross-box">
+                                    <span class="rotating-span"></span>
+                                    <span class="horizontal-span"></span>
+                                </span> Where will I sleep?
+                            </div>
+                            <div class="collapsible-body">
+                                <span class="flow-text">We have sleeping area with matresses and pillows. You can bring
+                                    along sleeping bags & other stuff.</span>
+                            </div>
+                        </li> -->
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col m1"></div>
+
+        </div>
+
+        <!-- Sponsors -->
+        <!-- <div id="sponsors-section" class="container-fluid section grey darken-4 scrollspy prize-gfx valign-wrapper"
+            style="margin-top: 0; margin-bottom: 0"> -->
+            <!-- <div class="side-gfx side-gfx-left"></div> -->
+
+            <!-- <div class="container"> -->
+              <!-- <h2 class="center light-heading">Our Sponsors</h2> -->
+                  <!-- <div class="sponsors-container">
+                    <div class="row">
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://www.sogosurvey.com/" target="_blank">
+                                <center>
+                                    <h4 class="center light-para">Title<br>Sponsor</h4>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/SponsorsLogo_3/sogosurvey_logo.svg"
+                                            class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://www.sogosurvey.com/"
+                                        target="_blank">SoGoSurvey</a>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://www.creative-tim.com/" target="_blank">
+                                <center>
+                                    <h4 class="center light-para">Tech <br>Partner</h4>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/SponsorsLogo_3/creative-tim-transparent-bg.png"
+                                            class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://www.creative-tim.com/"
+                                        target="_blank">Creative Tim</a>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://www.bugsee.com/" target="_blank">
+                                <center>
+                                    <h4 class="center light-para">Tech <br>Partner</h4>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/SponsorsLogo_3/Bugsee-Logo.png"
+                                            class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://www.bugsee.com/"
+                                        target="_blank">Bugsee</a>
+                                </center>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m4 l4 ">
+                            <a href="" target="_blank">
+                                <center>
+                                    <h4 class="center light-para">Tech <br>Partner</h4>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/SponsorsLogo_3/Acxiom_Logo_HighRes.png"
+                                            class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="" target="_blank">Axiom Technologies</a>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://www.digitalocean.com/" target="_blank">
+                                <center>
+                                    <h4 class="center light-para">Cloud <br>Partner</h4>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/SponsorsLogo_3/digital-ocean.png"
+                                            class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://www.digitalocean.com/"
+                                        target="_blank">Digital Ocean</a>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://www.lokmat.com/" target="_blank">
+                                <center>
+                                    <h4 class="center light-para">Partner<br><br></h4>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/SponsorsLogo_3/lokmat.png"
+                                            class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://www.lokmat.com/"
+                                        target="_blank">Lokmat</a>
+                                </center>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://ohcampus.com/" target="_blank">
+                                <center>
+                                    <h4 class="center light-para">Media <br>Partner</h4>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/SponsorsLogo_3/OhCampus New Logo.png"
+                                            class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://ohcampus.com/"
+                                        target="_blank">OhCampus</a>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://crowdsource.google.com/" target="_blank">
+                                <center>
+                                    <h4 class="center light-para">Community <br>Partner</h4>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/SponsorsLogo_3/crowd.png"
+                                            class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://crowdsource.google.com/"
+                                        target="_blank">Google Crowdsource</a>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="col s12 m4 l4 ">
+                      
+                            <center>
+                                <h4 class="center light-para">Community <br>Partner</h4>
+                                <div class="sponsors-logo-div valign-wrapper">
+                                    <img src="./assets/SponsorsLogo_3/Ahtesaab_logo.png"
+                                        class="responsive-img sponsors-img">
+                                </div>
+                         
+                                <p class="light-heading flow-text">Ahtesaab Foundation
+                            </center>
+                     
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://iide.co/" target="_blank">
+                                <center>
+                                    <h4 class="center light-para">Knowledge<br>Partner</h4>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/SponsorsLogo_3/iide.png"
+                                            class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://iide.co/"
+                                        target="_blank">IIDE</a>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://www.hellenergy.com/" target="_blank">
+                                <center>
+                                    <h4 class="center light-para">Energy <br> Partner</h4>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/SponsorsLogo_3/hell1.png" width="50px" height="150px"
+                                            class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://www.hellenergy.com/"
+                                        target="_blank">Hell Energy</a>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="col s12 m4 l4 ">
+                          
+                            <center>
+                                <h4 class="center light-para">Fun <br> Partner</h4>
+                                <div class="sponsors-logo-div valign-wrapper">
+                                    <img src="./assets/sponsors/noescape_burned.png"
+                                        class="responsive-img sponsors-img">
+                                </div>
+                          
+                                <p class="light-heading flow-text">No Escape</p>
+                            </center>
+                         
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="row">
+                        <h4 class="center light-para">Community Partners</h4>
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://www.tcs.com/" target="_blank">
+                                <center>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/sponsors/tcs.png" class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://www.tcs.com/"
+                                        target="_blank">TCS</a>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://difference-engine.ai" target="_blank">
+                                <center>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/sponsors/difference-engine-logo-crop.png"
+                                            class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://difference-engine.ai/"
+                                        target="_blank">Difference Engine</a>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="col s12 m4 l4 ">
+                            <a href="https://www.neebal.com/" target="_blank">
+                                <center>
+                                    <div class="sponsors-logo-div valign-wrapper">
+                                        <img src="./assets/sponsors/neebal.png" class="responsive-img sponsors-img">
+                                    </div>
+                                    <br>
+                                    <a class="light-heading flow-text" href="https://www.neebal.com/"
+                                        target="_blank">Neebal</a>
+                                </center>
+                            </a>
+                        </div>
+                    </div> -->
+                <!-- </div>
+
+            </div> -->
+
+        </div>
+        <!-- Registration
+        <div id="registration-section" class="container-fluid section grey darken-4 scrollspy">
+            <div class="container-fluid row">
+                <h2 class="center light-heading">Interested in coming over?</h2>
+            </div>
+            <div class="container-fluid row">
+                <a id="register" class=" center btn waves-effect waves-teal grey darken-4 light-heading" href="#" style="text-align: center; width: 100%;">
+                    Registrations
+                        Openning Shortly!!
+                </a>
+            </div>
+        </div> -->
+
+
+        <!--Footer Section-->
+        <footer class="page-footer grey darken-4 ">
+            <div class="container ">
+                <div class="row">
+                    <h2 class="center light-heading">Interested in Sponsoring</h2>
+                    <div class="row center">
+                        <a class="btn waves-effect waves-teal grey darken-4 light-heading glow-light" style="background-color: #64ffda !important; color: black;"
+                            href="https://gfg-mhssce.000webhostapp.com/">
+                            Sponsor us
+                        </a>
+                    </div>
+                </div>
+                <div class="row center light-para">
+
+                    <!-- <div class="col l4 s12">
+
+                    <p><h5>Website developed and maintained by-</h5></p>
+                    <p>The Programmers Club</p>
+
+                </div> -->
+
+                    <div class="col xl3 l3 m6 s12">
+                        <h5 class="light-heading">Staff Co-ordinators</h5>
+                        <ul>
+                            <li>
+                                <b>Er. Ahlam Ansari</b><br>ahlam@mhssce.ac.in <br>
+                                +91 9773262171
+                            </li><br>
+                            <li>
+                                <b>Er. Mohammed Ahmed</b><br>ahmed@mhsscoe.ac.in <br>+91 9987335278
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col  xl3 l3 m6 s12 ">
+                        <h5 class="light-heading">Student Co-ordinators</h5>
+                        <ul>
+                            <li class="big"><b>Amaan Siddiqui</b> :  +91 90829 73624</li>
+                            <li class="big"><b>Zafar Shaikh</b> : +91 70288 83297</li>
+                            <li class="big"><b>Danish Shaikh</b> : +91 88791 27877</li>
+                            <li class="big"><b>&nbsp;</b></li>
+                            <li class="big"><b>&nbsp;</b></li>
+                        </ul>
+                    </div>
+
+                    <div class="col xl3 l3 m6 s12">
+                        <h5 class="light-heading">Social Links</h5>
+                        <ul>
+                            <li>
+                                <a class="light-para big" href="https://www.facebook.com/err404mhss"
+                                    target="_blank">Facebook</a>
+                            </li>
+                            <li>
+                                <a class="light-para big" href="https://www.instagram.com/err404hackathon"
+                                    target="_blank">Instagram</a>
+                            </li>
+                            <li>
+                                <a class="light-para big" href="https://www.twitter.com/err404hackathon"
+                                    target="_blank">Twitter</a>
+                            </li>
+                            <!-- <li>
+                        <a class="light-heading big" href="https://github.com/TheProgrammersClub"
+                           target="_blank">Github</a>
+                    </li> -->
+                        </ul>
+                    </div>
+
+                    <div class="col xl3 l3 m6 s12">
+                        <h5 class="light-heading">Contact Us</h5>
+                        <ul>
+                            <li class="big">programmersclub@mhssce.ac.in</li>
+                            <li class="big"><a href="https://gfg-mhssce.000webhostapp.com/" class="light-para big">gfg-mhssce</a></li>
+                            <!-- <li class="big">hackathon_err404@mhssce.ac.in</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright ">
+                <div class="container">
+                    <div class="valign-wrapper" style="align-content: center; ">
+                        <i class="material-icons" style="margin-right: 8px; color: #ff5252">favorite</i> 
+                         2023 GFG-mhssce & 
+                        The Programmers Club
+                    </div>
+                    <!-- <blockquote style="border-color: #ff5252" class="flow-text">No Copyright :)</blockquote> -->
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    </div>
+    <!-- main body | ends -->
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <!-- Firebase JS -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script> -->
+    <!-- Scroll Reval -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/animation_logic.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/navbar.js"></script>
+    <!--SLICK-->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+</body>
+
+</html>
