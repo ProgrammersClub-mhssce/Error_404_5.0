@@ -328,6 +328,7 @@ ul li a.active {
     /* background-color: #fafafa; */
     background-color: #fff;
     overflow: hidden;
+    transition: all 500ms;
 }
 
 .sponsors-img {
@@ -370,6 +371,31 @@ ul li a.active {
     filter: grayscale(100%);
     /*background-blend-mode: luminosity;*/
     transition: background-position 600ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+.sponsors-logo-div:hover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #64FFDA;
+    padding: 10px;
+    /* background-color: #fafafa; */
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 1px 0px 97px rgb(100 255 218 / 75%);
+}
+
+.grid-item img{
+    transition: all 500ms;
+}
+.grid-item img:hover {
+    
+
+    border: 1px solid #64FFDA;
+    padding: 5px;
+    /* background-color: #fafafa; */
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 1px 0px 97px rgb(100 255 218 / 75%);
 }
 
 .side-gfx-left {
