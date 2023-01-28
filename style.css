@@ -134,17 +134,7 @@ a:hover {
   margin-bottom: 0;
 }
 
-.countdown {
-  position:absolute;
-  width: 100vw;
-  height: 110px;
-  z-index: 0;
-  top:495px;
-  bottom: 0;
-  margin-bottom: -30px;
-  box-shadow: 2px 2px 15px rgba(100, 255, 218, 0.5);
-  background-color: none;
-}
+
 
 .glow-light:hover {
   box-shadow: 2px 2px 15px rgba(100, 255, 218, 0.5);
@@ -373,13 +363,13 @@ a:hover {
 }/*# sourceMappingURL=style.css.map */
 
 
-
-
-
-
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,800,900&display=swap");
 
 
+
+/*Countdown and snowflakes styling*/
+
+/*Countdown section*/
 
 body {
   background-color: none;;
@@ -427,6 +417,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 2px 2px 15px rgb(100 255 218 / 50%);
 }
 
 #countdown .circle svg {
@@ -468,7 +459,7 @@ body {
   text-transform: uppercase;
 }
 
-/* snowflakes */
+/* snowflakes  section*/
 #snowflakes {
   position: fixed;
   top: -50%;
@@ -492,7 +483,7 @@ ion-icon[name="snow-outline"] {
   }
 }
 
-
+/* Making countdown responsive*/
 
 @media screen and (max-width: 600px) {
   #countdown .circle {

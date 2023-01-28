@@ -16,15 +16,15 @@ let wishDays = 10;
 
 let x = setInterval(function () {
   let currentYear = new Date().getFullYear();
-  let newYear = new Date(`Mar 18, ${currentYear} 09:00:00`);
+  let eventTime = new Date(`Mar 18, ${currentYear} 09:00:00`);
   let now = new Date().getTime();
-  let distance = newYear - now;
+  let remTime = eventTime - now;
 
   // time calculation
-  let d = Math.floor(distance / (1000 * 60 * 60 * 24));
-  let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  let s = Math.floor((distance % (1000 * 60)) / (1000));
+  let d = Math.floor(remTime / (1000 * 60 * 60 * 24));
+  let h = Math.floor((remTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let m = Math.floor((remTime % (1000 * 60 * 60)) / (1000 * 60));
+  let s = Math.floor((remTime % (1000 * 60)) / (1000));
 
   // output the result
   days.innerHTML = d + "<br><span>Days</span>";
@@ -39,8 +39,8 @@ let x = setInterval(function () {
   ss.style.strokeDashoffset = 440 - (440 * s) / 60;
 
   // if countdown is over, change the innerText of .text
-  if (distance < 0) {
-    document.querySelector('.text').innerText = `Happy New Year ${currentYear}`;
+  if (remTime < 0) {
+    document.querySelector('.text').innerText = `Now It's Time for ERR_404 5.0`;
   }
 }, 1000);
 
@@ -129,15 +129,3 @@ function createFlake() {
 
 setInterval(createFlake, 500);
 
-// help button
-let help = document.getElementById('help');
-let menu = document.querySelector('.menu');
-
-help.onclick = function() {
-  menu.classList.toggle('active');
-  if (menu.classList.contains('active')) {
-    help.innerHTML = `<ion-icon name="close-outline"></ion-icon>`;
-  } else {
-    help.innerHTML = `<ion-icon name="menu-outline"><ion-icon>`;
-  }
-}
