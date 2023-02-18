@@ -380,12 +380,13 @@ body {
 .containerCount {
   position: relative;
   width: 100vw;
-  
+  display: flex;
   /* margin-top: 50px; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3em;
+  gap: 1em;
+  padding : 20px 0px;
   background-color: #000;
   z-index: 1;
   
@@ -471,7 +472,12 @@ body {
   z-index: -1;
   pointer-events: none;
 }
-
+#devfolio-button-iframe{
+  position: absolute;
+  top: 90vh;
+  left: 50%;
+  margin-left: -156px;
+}
 ion-icon[name="snow-outline"] {
   color: #fff;
   position: absolute;
