@@ -182,11 +182,11 @@ a:hover {
   background: #212121 !important;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 1000px) {
   #landing-section {
     margin-top: 0;
     margin-bottom: 0;
-    background-image: url("https://i.lensdump.com/i/RyhXio.gif") !important;
+    background-image: url("/assets/erbg.gif") !important;
     background-size: cover;
     background-position-y: center;
     background-position-x: center;
